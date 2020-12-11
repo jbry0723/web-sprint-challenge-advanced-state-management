@@ -1,4 +1,31 @@
 import axios from 'axios';
+export const START_FETCH="START_FETCH"
+export const FETCH_SMURFS="FETCH_SMURFS"
+export const FETCH_ERROR="FETCH_ERROR"
+export const ADD_SMURF="ADD_SMURF"
+
+export const fetchSmurfs=()=>dispatch=>{
+
+    dispatch ({type:START_FETCH})
+    
+    axios
+    .get ("http://localhost:3333/smurfs")
+    .then (resp=>{
+        console.log(resp.data)
+        dispatch({type:FETCH_SMURFS, payload:resp.data})
+    })
+    .catch(err=>{
+        console.log("error",err)
+        dispatch({type:FETCH_ERROR,payload:err})
+    })
+
+}
+
+export const addSmurf=(smurf)=>dispatch=>{
+    dispatch( {type:ADD_SMURF, payload:smurf})
+}
+
+
 
 //Task List:
 //1. Add fetch smurfs action: 
