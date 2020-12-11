@@ -22,7 +22,7 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What problem does the context API help solve?
-A. It allows you to connect multiple parts of your app to state without using prop drilling.
+A. It allows you to connect multiple parts of your app to state without using prop drilling..
 2. In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
 A. Reducers handle state and all change to state. Actions handle all information flowing into reducers. Store allows you to have an application state that can be accessed by all components
 3. What is the difference between Application state and Component state? When would be a good time to use one over the other?
